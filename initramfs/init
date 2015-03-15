@@ -25,6 +25,9 @@ init_devs
 init_aufs
 init_zram
 
+modprobe ata_piix
+modprobe sd_mod
+
 # find data dir with filesystem bundles
 DATA="$(find_data 60 "$DATAMNT")"
                                                                                                                                                       debug_shell

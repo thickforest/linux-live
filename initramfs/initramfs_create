@@ -72,6 +72,12 @@ copy_including_deps /$LMK/kernel/drivers/staging/zsmalloc # needed by zram
 copy_including_deps /$LMK/kernel/drivers/staging/zram
 copy_including_deps /$LMK/kernel/drivers/block/loop.*
 copy_including_deps /$LMK/kernel/fs/fuse
+copy_including_deps /$LMK/kernel/drivers/ata/ata_piix.ko
+copy_including_deps /$LMK/kernel/lib/crc-t10dif.ko
+copy_including_deps /$LMK/kernel/drivers/scsi/sd_mod.ko
+copy_including_deps /$LMK/kernel/drivers/fs/fat/fat.ko
+copy_including_deps /$LMK/kernel/drivers/fs/fat/vfat.ko
+copy_including_deps /$LMK/kernel/drivers/fs/nls/nls_utf8.ko
 copy_including_deps /$LMK/modules.*
 
 find $INITRAMFS -name "*.ko.gz" | xargs gunzip
