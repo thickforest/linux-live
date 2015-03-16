@@ -435,8 +435,8 @@ find_data()
 }
 
 # Activate persistent changes
-# $1 = data directory
-# $2 = target changes directory
+# $1 = data directory			= /memory/data
+# $2 = target changes directory		= /memory/changes
 #
 persistent_changes()
 {
