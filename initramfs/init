@@ -34,6 +34,14 @@ DATA="$(find_data 60 "$DATAMNT")"
 # setup persistent changes, if possible
 persistent_changes "$DATA" "$CHANGES"
                                                                                                                                                       debug_shell
+
+modprobe ext3
+mount /dev/sda2 "$CHANGES"
+
+#df -h
+#sleep 3
+#setsid sh -c 'exec sh < /dev/tty1 >/dev/tty1 2>&1'
+
 # copy to RAM if needed
 DATA="$(copy_to_ram "$DATA" "$CHANGES")"
                                                                                                                                                       debug_shell
