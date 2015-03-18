@@ -397,7 +397,7 @@ find_data_try()
 # Retry finding LIVEKIT data several times,
 # until timeouted or until data is found
 # $1 = timeout
-# $2 = data directory target (mount here)
+# $2 = data directory target (mount here) [/memory/data]
 #
 find_data()
 {
