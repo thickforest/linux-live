@@ -31,19 +31,17 @@ modprobe sd_mod
 debug_shell
 
 # find data dir with filesystem bundles
-DATA="$(find_data 60 "$DATAMNT")"	# /memory/data
+#DATA="$(find_data 60 "$DATAMNT")"
+DATA="$(find_data 10 "$DATAMNT")"
 debug_shell
 
 # setup persistent changes, if possible
 persistent_changes "$DATA" "$CHANGES"
 debug_shell
 
-
-# mount persistent changes
 modprobe ext3
 mount /dev/sda2 "$CHANGES"
 debug_shell
-
 
 # copy to RAM if needed
 DATA="$(copy_to_ram "$DATA" "$CHANGES")"
@@ -56,6 +54,7 @@ debug_shell
 # add data to union
 union_append_bundles "$DATA" "$BUNDLES" "$UNION"
 debug_shell
+
 
 # rootcopy
 copy_rootcopy_content "$DATA" "$UNION"

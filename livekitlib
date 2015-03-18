@@ -327,7 +327,8 @@ download_data_pxe()
          route add default gw "$GW"
       else
          # if client ip is unknown, try to get a DHCP lease
-         udhcpc -i $ETH -f -q
+         ifconfig $ETH up
+         udhcpc -i $ETH -f -q > /dev/null 2>&1
       fi
 
       # well known IP address of Google public DNS service
@@ -397,7 +398,7 @@ find_data_try()
 # Retry finding LIVEKIT data several times,
 # until timeouted or until data is found
 # $1 = timeout
-# $2 = data directory target (mount here) [/memory/data]
+# $2 = data directory target (mount here)
 #
 find_data()
 {
