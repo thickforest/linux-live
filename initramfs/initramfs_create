@@ -73,6 +73,8 @@ copy_including_deps /$LMK/kernel/drivers/staging/zram
 copy_including_deps /$LMK/kernel/drivers/block/loop.*
 copy_including_deps /$LMK/kernel/fs/fuse
 
+copy_including_deps /$LMK/kernel/fs/aufs/aufs.ko
+
 copy_including_deps /$LMK/kernel/drivers/ata/ata_piix.ko
 copy_including_deps /$LMK/kernel/lib/crc-t10dif.ko
 copy_including_deps /$LMK/kernel/drivers/scsi/sd_mod.ko

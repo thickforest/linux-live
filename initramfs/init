@@ -40,7 +40,7 @@ persistent_changes "$DATA" "$CHANGES"
 debug_shell
 
 modprobe ext3
-mount /dev/sda2 "$CHANGES"
+mount /dev/sda2 "$CHANGES"  # /dev/sda2 如果为vfat分区，则失败
 debug_shell
 
 # copy to RAM if needed
