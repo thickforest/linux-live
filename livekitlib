@@ -570,9 +570,9 @@ sortmod()
 
 # Mount squashfs filesystem bundles
 # and add them to union
-# $1 = directory where to search for bundles
-# $2 = directory where to mount bundles
-# $3 = directory where union is mounted
+# $1 = directory where to search for bundles # /memory/data/mylinux
+# $2 = directory where to mount bundles # /memory/bundles
+# $3 = directory where union is mounted # /memory/union
 #
 union_append_bundles()
 {
